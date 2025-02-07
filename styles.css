@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&display=swap");
+
+ {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(212, 45%, 89%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 100dvh;
+  width: 100vh;
+  font-family: "Figtree", serif;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1rem;
+  margin-top: 5vh;
+  height: 72vh;
+  width: 50%;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  align-items: start;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 1.5rem;
+  }
+
+  .main-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .text-content {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+}
+
+/*Media Query For Smaller Screens */
+@media Screen and (max-width: 375px) {
+  .card-container {
+    width: 80%;
+    height: 75vh;
+    margin-top: 15vh;
+  }
+
+  .text-content {
+    font-size: 0.9rem;
+  }
+
+  .attribution {
+    font-size: 0.8rem;
+  }
+}
+
+.attribution {
+  margin-top: auto;
+  padding: 1rem;
+  text-align: center;
+}
