@@ -1,77 +1,79 @@
-@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
 
- {
+/* CSS Variable */
+:root {
+  --white: #ffffff;
+  --slate-300: #d6e2f0;
+  --slate-500: #68778d;
+  --slate-900: #1f3251;
+  --body-font: "Figtree", serif;
+}
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  background-color: hsl(212, 45%, 89%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background-color: var(--slate-300);
+  font-family: var(--body-font);
+  overflow: hidden;
   margin: auto;
-  height: 100dvh;
-  width: 100vh;
-  font-family: "Figtree", serif;
+  /* height: 100dvh; */
+  /* width: 100vh; */
 }
 
 .card-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 1rem;
-  margin-top: 5vh;
-  height: 72vh;
-  width: 50%;
-  border-radius: 1.5rem;
-  padding: 1.5rem;
-  align-items: start;
-
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 1.5rem;
-  }
-
-  .main-heading {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-
-  .text-content {
-    font-size: 1rem;
-    font-weight: 400;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-}
-
-/*Media Query For Smaller Screens */
-@media Screen and (max-width: 375px) {
-  .card-container {
-    width: 80%;
-    height: 75vh;
-    margin-top: 15vh;
-  }
-
-  .text-content {
-    font-size: 0.9rem;
-  }
-
-  .attribution {
-    font-size: 0.8rem;
-  }
-}
-
-.attribution {
-  margin-top: auto;
+  background-color: var(--white);
+  width: 27vw;
   padding: 1rem;
+  margin: 5vh auto;
+  border-radius: 1.8rem;
   text-align: center;
+
+  .image-container {
+    width: 100%;
+    margin-bottom: 10px;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 1.5rem;
+    }
+  }
+
+  .text-content {
+    margin: 20px 0;
+
+    .main-heading {
+      color: var(--slate-900);
+      font-size: 24px;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    p {
+      color: var(--slate-500);
+      font-size: 18px;
+    }
+  }
+}
+
+/* Media Query For Smaller Screens */
+@media screen and (max-width: 768px) {
+  .card-container {
+    width: 90vw;
+    margin-top: 15vh;
+
+    .text-content {
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
 }
